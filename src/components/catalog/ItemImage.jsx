@@ -2,13 +2,23 @@
 // Ошондуктан сүрөт жүктөлбөсө да бет катасыз көрүнөт жана ар бир товар аталышы менен чагылат.
 import { useState } from 'react';
 import site from '../../site.js';
+import { useWikiImage } from '../../lib/useWikiImage.js';
 
 const altSrc = (src) => {
   const seed = encodeURIComponent(String(src || 'item').replace(/[^a-z0-9]/gi, '').slice(-32) || 'item');
   return `https://picsum.photos/seed/${seed}/800/600`;
 };
 
-export default function ItemImage({ src, alt = '', className = '', icon, label, eager = false }) {
+export default function ItemImage(props) {
+  // `wiki` берилсе — алгач Wikipedia API'ден туура сүрөт изделет, табылбаса `src` колдонулат
+  const found = useWikiImage(props.wiki);
+  if (props.wiki && found === undefined) {
+    return <div className={`img-box img-box--loading ${props.className || ''}`}><span className="img-box__ph" aria-hidden="true">{props.icon || site.logo}</span></div>;
+  }
+  return <ImageChain key={found || props.src} {...props} src={found || props.src} />;
+}
+
+function ImageChain({ src, alt = '', className = '', icon, label, eager = false }) {
   // 0 = негизги, 1 = алмаштыруучу, 2 = карточка
   const [stage, setStage] = useState(src ? 0 : 2);
   const url = stage === 0 ? src : stage === 1 ? altSrc(src) : null;

@@ -15,6 +15,7 @@ export default {
     "dark": "#1e1035"
   },
   "heroImage": "https://loremflickr.com/1600/900/shopping,mall?lock=21",
+  "heroWiki": "Shopping mall",
   "contacts": {
     "phone": "+996 774 054 601",
     "instagram": "satyba1dyev18",
@@ -36,9 +37,9 @@ export default {
       "en": "Thousands of products — one place, fast delivery"
     },
     "heroText": {
-      "ky": "Электроника, үй буюмдары, сулуулук, балдар үчүн жана азык-түлүк. Бишкек боюнча жеткирүү 1 күндө.",
-      "ru": "Электроника, дом, красота, детям и продукты. Доставка по Бишкеку за 1 день.",
-      "en": "Electronics, home, beauty, kids and groceries. Delivery in Bishkek within 1 day."
+      "ky": "Электроника, үй буюмдары, сулуулук, балдар үчүн, азык-түлүк жана спорт. Бишкек боюнча жеткирүү 1 күндө.",
+      "ru": "Электроника, дом, красота, детям, продукты и спорт. Доставка по Бишкеку за 1 день.",
+      "en": "Electronics, home, beauty, kids, groceries and sport. 1-day delivery in Bishkek."
     },
     "catalog": {
       "ky": "Каталог",
@@ -100,7 +101,8 @@ export default {
         "en": "Electronics"
       },
       "icon": "🎧",
-      "image": "https://loremflickr.com/800/600/electronics,gadget?lock=1108"
+      "wiki": "Consumer electronics",
+      "tags": "electronics,gadget"
     },
     {
       "id": "home",
@@ -110,7 +112,8 @@ export default {
         "en": "Home & kitchen"
       },
       "icon": "🏠",
-      "image": "https://loremflickr.com/800/600/kitchen,appliance?lock=977"
+      "wiki": "Kitchen",
+      "tags": "kitchen,home"
     },
     {
       "id": "beauty",
@@ -120,7 +123,8 @@ export default {
         "en": "Beauty"
       },
       "icon": "💄",
-      "image": "https://loremflickr.com/800/600/cosmetics?lock=1070"
+      "wiki": "Cosmetics",
+      "tags": "cosmetics"
     },
     {
       "id": "kids",
@@ -130,17 +134,30 @@ export default {
         "en": "Kids"
       },
       "icon": "🧸",
-      "image": "https://loremflickr.com/800/600/toys?lock=985"
+      "wiki": "Lego",
+      "tags": "toys,kids"
     },
     {
       "id": "grocery",
       "name": {
         "ky": "Азык-түлүк",
         "ru": "Продукты",
-        "en": "Groceries"
+        "en": "Grocery"
       },
       "icon": "🛒",
-      "image": "https://loremflickr.com/800/600/grocery,food?lock=994"
+      "wiki": "Honey",
+      "tags": "grocery,food"
+    },
+    {
+      "id": "sport",
+      "name": {
+        "ky": "Спорт жана эс алуу",
+        "ru": "Спорт и отдых",
+        "en": "Sport & outdoors"
+      },
+      "icon": "⛺",
+      "wiki": "Camping",
+      "tags": "camping,sport"
     }
   ],
   "plans": [
@@ -281,11 +298,11 @@ export default {
   ],
   "stats": [
     {
-      "value": "5",
+      "value": "28",
       "label": {
-        "ky": "категория",
-        "ru": "категорий",
-        "en": "categories"
+        "ky": "товар",
+        "ru": "товаров",
+        "en": "products"
       }
     },
     {
@@ -319,25 +336,15 @@ export default {
       "ru": "Бренд",
       "en": "Brand"
     },
-    "volume": {
+    "feature": {
+      "ky": "Өзгөчөлүгү",
+      "ru": "Особенность",
+      "en": "Feature"
+    },
+    "size": {
       "ky": "Көлөмү",
-      "ru": "Объём",
-      "en": "Volume"
-    },
-    "power": {
-      "ky": "Кубаттуулугу",
-      "ru": "Мощность",
-      "en": "Power"
-    },
-    "weight": {
-      "ky": "Салмагы",
-      "ru": "Вес",
-      "en": "Weight"
-    },
-    "age": {
-      "ky": "Жашы",
-      "ru": "Возраст",
-      "en": "Age"
+      "ru": "Объём / размер",
+      "en": "Size"
     },
     "warranty": {
       "ky": "Кепилдик",
@@ -379,9 +386,9 @@ export default {
     "en": "Approximate prices, close to Bishkek averages."
   },
   "dataNote": {
-    "ky": "Баалар болжолдуу (28.10.2026).",
-    "ru": "Цены ориентировочные (28.10.2026).",
-    "en": "Approximate prices (28.10.2026)."
+    "ky": "Баалар болжолдуу (28.10.2026). Сүрөттөр: Wikipedia / Wikimedia Commons.",
+    "ru": "Цены ориентировочные (28.10.2026). Фото: Wikipedia.",
+    "en": "Approximate prices (28.10.2026). Photos: Wikipedia."
   },
   "sources": []
 };
